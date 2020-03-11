@@ -11,6 +11,7 @@ namespace Compiladores1_proyecto1
         class Nodo
         {
             public int info;
+            public String token;
             public Nodo ant, sig;
         }
 
@@ -21,12 +22,13 @@ namespace Compiladores1_proyecto1
             raiz = null;
         }
 
-        void Insertar(int pos, int x)
+        void Insertar(int pos, String token,int x)
         {
             if (pos <= Cantidad() + 1)
             {
                 Nodo nuevo = new Nodo();
                 nuevo.info = x;
+                nuevo.token = token;
                 if (pos == 1)
                 {
                     nuevo.sig = raiz;
@@ -230,7 +232,7 @@ namespace Compiladores1_proyecto1
             Nodo reco = raiz;
             while (reco != null)
             {
-                Console.Write(reco.info + "-");
+                Console.Write(reco.token + " - "+ reco.info );
                 reco = reco.sig;
             }
             Console.WriteLine();

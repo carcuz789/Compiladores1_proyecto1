@@ -13,6 +13,8 @@ namespace Compiladores1_proyecto1
 {
     public partial class Form1 : Form
     {
+        static ListaGenericaDoble listok = new ListaGenericaDoble();
+
         public Form1()
         {
             InitializeComponent();

@@ -23,7 +23,12 @@ namespace Compiladores1_proyecto1
         }
         public void tokens(String token , int id ,int num)
         {
-
+            switch (id)
+            {
+                case 1: 
+                    
+                    break;
+            }
         }
     }
 }
