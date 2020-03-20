@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Compiladores1_proyecto1
 {
-    class ListaGenericaDoble
+  public  class ListaGenericaDoble
     {
         class Nodo
         {
@@ -22,7 +22,7 @@ namespace Compiladores1_proyecto1
             raiz = null;
         }
 
-        void Insertar(int pos, String token,int x)
+    public    void Insertar(int pos, String token,int x)
         {
             if (pos <= Cantidad() + 1)
             {
@@ -232,7 +232,7 @@ namespace Compiladores1_proyecto1
             Nodo reco = raiz;
             while (reco != null)
             {
-                Console.Write(reco.token + " - "+ reco.info );
+                Console.Write(reco.token + " - "+ reco.info +"\n" );
                 reco = reco.sig;
             }
             Console.WriteLine();

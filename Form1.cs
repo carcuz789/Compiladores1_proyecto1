@@ -11,12 +11,15 @@ using System.Windows.Forms;
 
 namespace Compiladores1_proyecto1
 {
+
+   
     public partial class Form1 : Form
     {
-        static ListaGenericaDoble listok = new ListaGenericaDoble();
-
+       public static ListaGenericaDoble listok = new ListaGenericaDoble();
+        
         public Form1()
         {
+           
             InitializeComponent();
         }
 
@@ -34,6 +37,7 @@ namespace Compiladores1_proyecto1
                     if (line != null)
                     {
                         texto = line + "\n";
+
                     }
                 }
                 sr.Close();
@@ -45,7 +49,14 @@ namespace Compiladores1_proyecto1
         {
            
             Lexico lexco = new Lexico();
-            lexco.AnaliLexico(this.txtPrincipal.Text.ToCharArray());
+            try {
+                lexco.AnaliLexico(this.txtPrincipal.Text.ToCharArray());
+                MessageBox.Show("LEXICO EXITOS");
+                listok.Imprimir();
+            } catch(InvalidCastException ) {
+                MessageBox.Show("ESTA MALO :,(");
+            }
+           
 
         }
     }
